@@ -1,0 +1,27 @@
+# Bu .editorconfig dosyası, Visual Studio Code, Visual Studio, JetBrains Rider gibi birçok farklı IDE/editör tarafından desteklenen .editorconfig dosyası biçimindedir.
+
+# Proje kök dizininde bulunan .editorconfig dosyası, bu projenin ayarlarını belirlemek için kullanılır.
+
+# Girinti boşlukları için ortak ayarlar:
+[*]
+indent_style = space        # Girinti karakterleri olarak boşluk kullan
+indent_size = 4             # Girinti seviyesi için kullanılacak boşluk sayısı
+end_of_line = crlf          # Satır sonu karakterleri (EOL) olarak CRLF (Windows stili) kullan
+
+# Dosya kodlama biçimi için ortak ayarlar:
+charset = utf-8              # Dosya kodlama biçimi olarak UTF-8 kullan
+
+# Satır uzunluğu sınırlaması:
+[*.{cs,vb,js,jsx,ts,tsx}]
+max_line_length = 120        # Bir satırda en fazla 120 karakter olsun
+
+# Çift tırnak kullanımı:
+[*.cs]
+csharp_style_string_interpolation = false        # String içinde { } kullanarak yer tutucu kullanımını etkisizleştir
+csharp_style_string_interpolation_formatting = true  # String içinde { } kullanırken otomatik biçimlendirmeyi etkinleştir
+csharp_style_single_line_comment_above = true   # Kısa açıklamaları çift tırnak içine al
+csharp_prefer_simple_string_interpolation = true  # Basit string iç içe geçirme öner
+dotnet_remove_unnecessary_usings = true # Kullanılmayan using direktiflerini kaldırma:
+
+[*.{js,jsx,ts,tsx}]
+indent_size = 2             # Girinti seviyesi için kullanılacak boşluk sayısı
