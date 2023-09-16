@@ -11,7 +11,7 @@
         <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0"/>
     </ItemGroup>
 
-<Target Name="husky" AfterTargets="Build" Condition="'$(HUSKY)' != 0">
+    <Target Name="husky" AfterTargets="Build" Condition="'$(HUSKY)' != 0">
         <Exec Command="dotnet tool restore" WorkingDirectory="../" />
         <Exec Command="dotnet husky install" WorkingDirectory="../" /> 
     </Target>
